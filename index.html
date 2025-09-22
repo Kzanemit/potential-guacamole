@@ -1,145 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
   <meta charset="UTF-8">
   <meta name="author" content="Kyeanna Zane Mitchell">
   <meta name="description" content="Portfolio of Kyeanna, an aspiring developmental psychologist. Learn more about the goals I have, my experience, and contact information.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kyeanna Zane Mitchell | Developmental Psychology</title>
-
-  <!-- Favicon link (even if just placeholder) -->
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-
-  <!-- Internal Stylesheet -->
-  <style>
-    /* Tag selectors (at least 4) /
-    body {
-      background-color: darkblue;
-      color: white;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-    }
-
-    header, main, footer {
-      max-width: 900px;
-      margin: auto; 
-      text-align: center;
-    }
-
-    h1, h2 {
-      color: white;
-    }
-
-    nav {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    nav a {
-      color: white;
-      margin-right: 20px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    hr {
-      border: 1px solid white;
-      width: 80%;
-      margin: 20px auto;
-    }
-
-    section {
-      margin-bottom: 40px;
-    }
-
-    img.brain {
-      width: 100%;
-      max-width: 600px;
-      display: block;
-      margin: 20px auto;
-      border-radius: 10px;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: white;
-      font-weight: bold;
-    }
-
-    / ID selectors (at least 2) */
-    #wrapper {
-      padding: 40px 0;
-    }
-
-    #main-sections {
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 20px;
-      border-radius: 8px;
-    }
-/* Class selectors (at least 2) */
-    .highlight {
-      color: yellow;
-      font-weight: bold;
-    }
-
-    .small-text {
-      font-size: 12px;
-    }
-
-    .bold {
-      font-weight: bold;
-    }
-  </style>
-</head> 
-
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <!-- ADDED WRAPPER ID -->
-  <div id="wrapper">
+<div id="wrapper">
+  <header>
+    <h1>Kyeanna Zane Mitchell</h1>
+    <h2>Aspiring Developmental Psychologist</h2>
+    <nav>
+      <ul>
+        <li><a href="index.htm" class="selected">Home</a></li>
+        <li><a href="resume.htm">Resume</a></li>
+        <li><a href="transcript.htm">Transcript</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header>
-      <h1>Kyeanna Zane Mitchell</h1>
-      <h2>Aspiring Developmental Psychologist</h2>
-      <nav>
-        <a href="Resume.htm">Resume</a>
-        <a href="#objective">My Objective</a>
-      </nav>
-    </header>
+  <main>
+    <section>
+      <p>I am enrolled as a dual enrollment student at <abbr title="State College of Florida">SCF</abbr>, actively engaging in clubs such as <b>FBLA</b>.</p>
+      <p>I am employed at an independent living community called <span class="special">Freedom Village</span> as a server, improving customer service skills.</p>
+      <img src="images/brain.jpg" alt="Young child with glowing brain illustration">
+    </section>
 
-    <!-- ADDED MAIN-SECTIONS ID -->
-    <main id="main-sections">
-      <section>
-        <p>I am enrolled as a dual enrollment student at State College of Florida, actively engaging in clubs such as <b>FBLA</b> to widen my scope on business and understand some of the ways that business interactions work.</p>
-        <p>With hopes of opening up a private practice in the future specializing in helping children with their well-being.</p>
-        <p>I am employed at an independent living community called <span class="highlight">Freedom Village</span> as a server, where I spend most of my time multitasking, practicing customer service skills, and improving my time management.</p>
-        <img src="pictures/brain.jpg" alt="Young child with glowing brain illustration" class="brain">
-      </section>
+    <section>
+      <h2>My Objective</h2>
+      <p>My objective is to open a practice and offer counseling and support to children.</p>
+    </section>
+  </main>
 
-      <hr>
-
-      <section id="objective">
-        <h2>My Objective</h2>
-        <p class="bold">My objective is to open a practice and offer counseling and support to children.</p>
-        <p class="small-text">Through my education in SCF, along with future higher education and involvement, I am learning skills to understand healthy development and support well-being, especially for children.</p>
-      </section>
-    </main>
-
-    <hr>
-
-    <footer>
-      <h2>Contact Information</h2>
-      <p>
-        Location: Bradenton, FL<br>
-        <a href="mailto:kzanemit@student.scf.edu">Email Me</a><br>
-        <a href="tel:9412649349">Call: <i>(941) 264-9349</i></a>
-      </p>
-      <p>&copy; 2025 Kyeanna Zane Mitchell</p>
-    </footer>
-
-  </div> <!-- end wrapper -->
+  <footer>
+    &copy; 2025 Kyeanna Zane Mitchell
+  </footer>
+</div> <!-- close wrapper -->
 </body>
 </html>
