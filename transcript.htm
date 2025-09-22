@@ -15,9 +15,9 @@
     <h2>Kyeanna Zane Mitchell</h2>
     <nav>
       <ul>
-        <li><a href="index.htm">Home</a></li>
-        <li><a href="resume.htm">Resume</a></li>
-        <li><a href="transcript.htm" class="selected">Transcript</a></li>
+        <li><a href="index.html" class="nav-link" id="home-link">Home</a></li>
+        <li><a href="Resume.htm" class="nav-link" id="resume-link">Resume</a></li>
+        <li><a href="transcript.htm" class="nav-link" id="transcript-link">Transcript</a></li>
       </ul>
     </nav>
   </header>
@@ -40,7 +40,7 @@
     <section>
       <h2>Professors for Recommendation</h2>
       <ul class="list-image">
-        <li>Gladys Green – Psychology Department</li>
+        <li>Gladys Greeen – Psychology Department</li>
         <li>Rodger Tornai – English Department</li>
       </ul>
     </section>
@@ -58,8 +58,6 @@
       <dl>
         <dt>MOS</dt>
         <dd>Microsoft Office Specialist (Word)</dd>
-        <dt>First Aid / CPR</dt>
-        <dd>Pending certification</dd>
       </dl>
     </section>
 
@@ -67,9 +65,8 @@
       <h2>Extras</h2>
       <p>Water formula: H<sub>2</sub>O</p>
       <p>Area of a square: a<sup>2</sup></p>
-      <p>Copyright <span class="special">&copy;</span> 2025 Kyeanna Zane Mitchell</p>
       <p>Temperature: 98<span class="special">&deg;</span>F</p>
-      <p>Dual Enrollment at <abbr title="State College of Florida">SCF</abbr></p>
+      <p>Copyright <span class="special">&copy;</span> 2025 Kyeanna Zane Mitchell</p>
     </section>
   </main>
 
@@ -77,5 +74,12 @@
     &copy; 2025 Kyeanna Zane Mitchell
   </footer>
 </div> <!-- close wrapper -->
+
+<script>
+  const page = window.location.pathname.split("/").pop();
+  if(page === "index.html") document.getElementById("home-link").classList.add("selected");
+  if(page === "Resume.htm") document.getElementById("resume-link").classList.add("selected");
+  if(page === "transcript.htm") document.getElementById("transcript-link").classList.add("selected");
+</script>
 </body>
 </html>
