@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Home - Kyeanna Zane Mitchell</title>
   <meta name="author" content="Kyeanna Zane Mitchell">
   <meta name="description" content="Portfolio of Kyeanna, an aspiring developmental psychologist. Learn more about the goals I have, my experience, and contact information.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kyeanna Zane Mitchell | Developmental Psychology</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,31 +15,29 @@
     <h2>Aspiring Developmental Psychologist</h2>
     <nav>
       <ul>
-        <li><a href="index.htm" class="selected">Home</a></li>
-        <li><a href="resume.htm">Resume</a></li>
-        <li><a href="transcript.htm">Transcript</a></li>
+        <li><a href="index.htm" class="nav-link" id="home-link">Home</a></li>
+        <li><a href="resume.htm" class="nav-link" id="resume-link">Resume</a></li>
+        <li><a href="transcript.htm" class="nav-link" id="transcript-link">Transcript</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section>
-      <p>I am enrolled as a dual enrollment student at <abbr title="State College of Florida">SCF</abbr>, actively engaging in clubs such as <b>FBLA</b> to understand business interactions.</p>
+      <p>I am enrolled as a dual enrollment student at <abbr title="State College of Florida">SCF</abbr>, actively engaging in clubs such as <b>FBLA</b> to widen my business knowledge.</p>
       <p>With hopes of opening a private practice in the future specializing in helping children with their well-being.</p>
-      <p>I am employed at an independent living community called <span class="special">Freedom Village</span> as a server, where I spend most of my time multitasking, practicing customer service skills, and improving my time management.</p>
-      <img src="images/brain.jpg" alt="Young child with glowing brain illustration">
+      <p>I work at <span class="highlight">Freedom Village</span> as a server, practicing multitasking, customer service, and time management.</p>
+      <img src="images/brain.jpg" alt="Young child with glowing brain illustration" class="brain">
     </section>
 
     <hr>
 
-    <section>
+    <section id="objective">
       <h2>My Objective</h2>
-      <p>My objective is to open a practice and offer counseling and support to children.</p>
-      <p>Through my education at <abbr title="State College of Florida">SCF</abbr> and future higher education, I am learning skills to understand healthy development and support well-being, especially for children.</p>
+      <p class="bold">My objective is to open a practice and offer counseling and support to children.</p>
+      <p class="small-text">Through my education at SCF, along with future higher education and involvement, I am learning skills to understand healthy development and support well-being.</p>
     </section>
   </main>
-
-  <hr>
 
   <footer>
     <h2>Contact Information</h2>
@@ -52,5 +49,12 @@
     <p>&copy; 2025 Kyeanna Zane Mitchell</p>
   </footer>
 </div> <!-- close wrapper -->
+
+<script>
+  const page = window.location.pathname.split("/").pop();
+  if(page === "index.htm") document.getElementById("home-link").classList.add("selected");
+  if(page === "resume.htm") document.getElementById("resume-link").classList.add("selected");
+  if(page === "transcript.htm") document.getElementById("transcript-link").classList.add("selected");
+</script>
 </body>
 </html>
