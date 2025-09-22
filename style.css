@@ -1,0 +1,116 @@
+/* General page styles */
+body {
+  background-color: darkblue;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin: auto;
+}
+
+header, main, footer {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+h1, h2 {
+  color: white;
+}
+
+/* Navigation styling */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 16px;
+  background-color: #036;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+nav a.selected {
+  background-color: #024;
+}
+
+nav a:hover {
+  background-color: #024;
+}
+
+/* Responsive nav for mobile */
+@media only screen and (max-width: 640px) {
+  nav li {
+    display: block;
+    margin: 10px 0;
+  }
+  nav a {
+    display: block;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+/* Section styles */
+section {
+  margin-bottom: 40px;
+}
+
+img.brain, .profile-photo {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+/* ID and class selectors */
+#wrapper {
+  padding: 40px 0;
+}
+
+#main-sections {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.highlight {
+  color: yellow;
+  font-weight: bold;
+}
+
+.small-text {
+  font-size: 12px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* Lists */
+.square-list {
+  list-style: square;
+}
+
+.list-image {
+  list-style-image: url('images/bullet.png');
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  text-align: center;
+}
