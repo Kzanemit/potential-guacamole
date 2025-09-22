@@ -21,7 +21,7 @@
     </div>
     <nav>
       <ul>
-        <li><a href="index.htm" class="nav-link" id="home-link">Home</a></li>
+        <li><a href="index.html" class="nav-link" id="home-link">Home</a></li>
         <li><a href="Resume.htm" class="nav-link" id="resume-link">Resume</a></li>
         <li><a href="transcript.htm" class="nav-link" id="transcript-link">Transcript</a></li>
       </ul>
@@ -55,4 +55,22 @@
           <div>Strong Communication</div>
           <div>Time Management</div>
           <div>Customer Service</div>
-          <div>Teamwork & Leadership
+          <div>Teamwork & Leadership</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Kyeanna Zane Mitchell
+  </footer>
+</div> <!-- /wrapper -->
+
+<script>
+  const page = window.location.pathname.split("/").pop();
+  if(page === "index.html") document.getElementById("home-link").classList.add("selected");
+  if(page === "Resume.htm") document.getElementById("resume-link").classList.add("selected");
+  if(page === "transcript.htm") document.getElementById("transcript-link").classList.add("selected");
+</script>
+</body>
+</html>
