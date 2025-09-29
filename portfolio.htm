@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - Kyeanna Zane Mitchell</title>
+  <meta name="author" content="Kyeanna Zane Mitchell">
+  <meta name="description" content="Portfolio showcasing Kyeanna Zane Mitchell's projects, photos, and artwork.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <h1>Portfolio</h1>
+    <h2>Kyeanna Zane Mitchell</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html" id="home-link">Home</a></li>
+        <li><a href="resume.html" id="resume-link">Resume</a></li>
+        <li><a href="transcript.html" id="transcript-link">Transcript</a></li>
+        <li><a href="portfolio.html" class="selected" id="portfolio-link">Portfolio</a></li>
+        <li><a href="newsletter.html" id="newsletter-link">Newsletter</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="figureContainer">
+      <figure>
+        <img src="images/cap.jpg" alt="Civil Air Patrol badge collage">
+        <figcaption>Civil Air Patrol</figcaption>
+      </figure>
+      <figure>
+        <img src="images/mindmap.jpg" alt="Psychology project mind map">
+        <figcaption>School Project</figcaption>
+      </figure>
+      <figure>
+        <img src="images/art.jpg" alt="Creative artwork by Kyeanna">
+        <figcaption>Art / Creative Work</figcaption>
+      </figure>
+      <figure>
+        <img src="images/teamwork.jpg" alt="Teamwork concept image">
+        <figcaption>Teamwork / Psychology Concept</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Kyeanna Zane Mitchell
+  </footer>
+</div> <!-- /wrapper -->
+
+<script>
+  const page = window.location.pathname.split("/").pop();
+  if(page === "index.html") document.getElementById("home-link").classList.add("selected");
+  if(page === "resume.html") document.getElementById("resume-link").classList.add("selected");
+  if(page === "transcript.html") document.getElementById("transcript-link").classList.add("selected");
+  if(page === "portfolio.html") document.getElementById("portfolio-link").classList.add("selected");
+  if(page === "newsletter.html") document.getElementById("newsletter-link").classList.add("selected");
+</script>
+</body>
+</html>
