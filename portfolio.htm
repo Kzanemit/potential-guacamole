@@ -4,62 +4,63 @@
   <meta charset="UTF-8">
   <title>Portfolio - Kyeanna Zane Mitchell</title>
   <meta name="author" content="Kyeanna Zane Mitchell">
-  <meta name="description" content="Portfolio of projects, images, and achievements of Kyeanna Zane Mitchell.">
+  <meta name="description" content="Portfolio showcasing Kyeanna Zane Mitchell's work, projects, and activities in child development and therapeutic concepts.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div id="wrapper">
   <header>
-    <h1>Portfolio</h1>
-    <h2>Kyeanna Zane Mitchell</h2>
+    <h1>Kyeanna Zane Mitchell</h1>
+    <h2>Portfolio</h2>
     <nav>
       <ul>
-        <li><a href="index.html" id="home-link">Home</a></li>
-        <li><a href="resume.htm" id="resume-link">Resume</a></li>
-        <li><a href="transcript.htm" id="transcript-link">Transcript</a></li>
-        <li><a href="portfolio.htm" class="selected" id="portfolio-link">Portfolio</a></li>
-        <li><a href="newsletter.htm" id="newsletter-link">Newsletter</a></li>
+        <li><a href="index.html" class="nav-link" id="home-link">Home</a></li>
+        <li><a href="resume.htm" class="nav-link" id="resume-link">Resume</a></li>
+        <li><a href="portfolio.htm" class="nav-link" id="portfolio-link">Portfolio</a></li>
+        <li><a href="transcript.htm" class="nav-link" id="transcript-link">Transcript</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="portfolio-section">
-      <div id="figureContainer">
-        <figure>
-          <img src="images/image1.jpg" alt="Portfolio Image 1">
-          <figcaption>Image 1 Description</figcaption>
-        </figure>
-        <figure>
-          <img src="images/image2.jpg" alt="Portfolio Image 2">
-          <figcaption>Image 2 Description</figcaption>
-        </figure>
-        <figure>
-          <img src="images/image3.jpg" alt="Portfolio Image 3">
-          <figcaption>Image 3 Description</figcaption>
-        </figure>
-        <figure>
-          <img src="images/image4.jpg" alt="Portfolio Image 4">
-          <figcaption>Image 4 Description</figcaption>
-        </figure>
-      </div>
+    <section id="figureContainer">
+      <!-- Calming Abstract Image -->
+      <figure>
+        <img src="images/OIP.webp" alt="Calming abstract image of nature or counseling setting">
+        <figcaption>Therapeutic / Calming Concept</figcaption>
+      </figure>
+
+      <!-- Civil Air Patrol Images -->
+      <figure>
+        <img src="images/438239624_808585701317335_8996815585694326249_n.png" alt="Civil Air Patrol activity 1">
+        <figcaption>Civil Air Patrol Activity</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/414729682_744887301020509_7301230653144471325_n.png" alt="Civil Air Patrol activity 2">
+        <figcaption>Civil Air Patrol Activity</figcaption>
+      </figure>
+
+      <!-- Child Development Illustration -->
+      <figure>
+        <img src="images/shuttershock_1680424798-scaled.jpg" alt="Educational illustration of child learning and growth">
+        <figcaption>Child Development Illustration</figcaption>
+      </figure>
     </section>
   </main>
 
   <footer>
     &copy; 2025 Kyeanna Zane Mitchell
   </footer>
-</div> <!-- close wrapper -->
+</div> <!-- /wrapper -->
 
 <script>
   const page = window.location.pathname.split("/").pop();
   if(page === "index.html") document.getElementById("home-link").classList.add("selected");
   if(page === "resume.htm") document.getElementById("resume-link").classList.add("selected");
-  if(page === "transcript.htm") document.getElementById("transcript-link").classList.add("selected");
   if(page === "portfolio.htm") document.getElementById("portfolio-link").classList.add("selected");
-  if(page === "newsletter.htm") document.getElementById("newsletter-link").classList.add("selected");
+  if(page === "transcript.htm") document.getElementById("transcript-link").classList.add("selected");
 </script>
 </body>
 </html>
-
