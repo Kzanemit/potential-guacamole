@@ -21,9 +21,10 @@
     </div>
     <nav>
       <ul>
-        <li><a href="index.html" class="nav-link" id="home-link">Home</a></li>
-        <li><a href="Resume.htm" class="nav-link" id="resume-link">Resume</a></li>
-        <li><a href="transcript.htm" class="nav-link" id="transcript-link">Transcript</a></li>
+        <li><a href="index.html" id="home-link">Home</a></li>
+        <li><a href="Resume.htm" id="resume-link">Resume</a></li>
+        <li><a href="transcript.htm" id="transcript-link">Transcript</a></li>
+        <li><a href="portfolio.htm" id="portfolio-link">Portfolio</a></li>
       </ul>
     </nav>
   </header>
@@ -71,6 +72,7 @@
   if(page === "index.html") document.getElementById("home-link").classList.add("selected");
   if(page === "Resume.htm") document.getElementById("resume-link").classList.add("selected");
   if(page === "transcript.htm") document.getElementById("transcript-link").classList.add("selected");
+  if(page === "portfolio.htm") document.getElementById("portfolio-link").classList.add("selected");
 </script>
 </body>
 </html>
