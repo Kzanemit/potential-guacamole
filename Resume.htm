@@ -21,35 +21,32 @@
     </div>
     <nav>
       <ul>
-        <li><a href="index.html" id="home-link">Home</a></li>
-        <li><a href="Resume.htm" id="resume-link">Resume</a></li>
-        <li><a href="transcript.htm" id="transcript-link">Transcript</a></li>
-        <li><a href="portfolio.htm" id="portfolio-link">Portfolio</a></li>
+        <li><a href="index.html" class="nav-link" id="home-link">Home</a></li>
+        <li><a href="resume.htm" class="nav-link" id="resume-link">Resume</a></li>
+        <li><a href="portfolio.htm" class="nav-link" id="portfolio-link">Portfolio</a></li>
+        <li><a href="transcript.htm" class="nav-link" id="transcript-link">Transcript</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="clearfix">
-    <aside>
-      <h2>Education</h2>
-      <h2>Work Experience</h2>
-      <h2>Extracurricular Activities</h2>
-      <h2>Skills</h2>
-    </aside>
     <section>
       <div class="resume-section">
         <h2>Education</h2>
         <p>Homeschooled Student</p>
         <p>Dual Enrollment Student, State College of Florida</p>
       </div>
+      
       <div class="resume-section">
         <h2>Work Experience</h2>
         <p>Server at <strong>Freedom Village</strong> — Started January 2025. Multitasking, customer service, and time management.</p>
       </div>
+      
       <div class="resume-section">
         <h2>Extracurricular Activities</h2>
         <p>Civil Air Patrol — Member for 2 years, developing leadership, discipline, and teamwork skills.</p>
       </div>
+      
       <div class="resume-section skills">
         <h2>Skills</h2>
         <div class="skill-grid">
@@ -70,9 +67,9 @@
 <script>
   const page = window.location.pathname.split("/").pop();
   if(page === "index.html") document.getElementById("home-link").classList.add("selected");
-  if(page === "Resume.htm") document.getElementById("resume-link").classList.add("selected");
-  if(page === "transcript.htm") document.getElementById("transcript-link").classList.add("selected");
+  if(page === "resume.htm") document.getElementById("resume-link").classList.add("selected");
   if(page === "portfolio.htm") document.getElementById("portfolio-link").classList.add("selected");
+  if(page === "transcript.htm") document.getElementById("transcript-link").classList.add("selected");
 </script>
 </body>
 </html>
