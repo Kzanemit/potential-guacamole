@@ -1,33 +1,60 @@
-/* Newsletter Specific Styles */
-.infobar {
-  background-color: #1d3557;
-  color: #f1faee;
-  text-align: center;
-  padding: 12px 0;
-  margin-bottom: 20px;
-  font-weight: bold;
-  border-radius: 8px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quarterly Newsletter covering child psychology topics and updates from our educational team.">
+    <title>ACME Quarterly Newsletter</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <img src="images/newsletter-banner.png" alt="Newsletter Banner" style="width:100%; border-radius:10px;">
+        <h1>ACME Quarterly Newsletter</h1>
+        <h2>Fall 2025 Edition</h2>
+    </header>
 
-blockquote {
-  text-align: justify;
-  background-color: #a8dadc;
-  padding: 10px 15px;
-  border-left: 5px solid #457b9d;
-  margin: 15px 0;
-  border-radius: 5px;
-}
+    <nav>
+        <ul>
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="resume.htm">Resume</a></li>
+            <li><a href="portfolio.htm">Portfolio</a></li>
+            <li><a href="newsletter.htm"><span class="selected">Newsletter</span></a></li>
+            <li><a href="contact.htm">Contact</a></li>
+        </ul>
+    </nav>
 
-blockquote:first-letter {
-  font-size: 1.8em;
-  font-weight: bold;
-}
+    <main>
+        <div class="infobar">
+            &nbsp;Web Seminar in Sarasota&nbsp;
+        </div>
 
-.box {
-  border: 2px solid #457b9d;
-  padding: 10px;
-  margin: 15px 0;
-  background-color: #f1faee;
-  border-radius: 5px;
-  text-align: justify;
-}
+        <h2>Child Development Insights</h2>
+        <p>Understanding the cognitive and emotional growth of children has never been more crucial. In this edition, we explore the latest findings in child psychology and how educators and parents can apply these insights to foster better learning environments. From early childhood milestones to adolescent cognitive development, our team delves into practical strategies that can be implemented in classrooms and homes alike.</p>
+
+        <p>Recent studies highlight the importance of social and emotional learning alongside traditional academics. Children benefit from structured activities that build communication, empathy, and problem-solving skills. Our quarterly review presents evidence-based practices that educators can integrate into daily lessons, promoting both intellectual and emotional growth.</p>
+
+        <blockquote>
+            Investing in a child's development today creates the foundation for tomorrow's success. Our research emphasizes personalized learning approaches, ensuring each child reaches their full potential.
+        </blockquote>
+
+        <div class="box">
+            <h2>Special Tips for Educators</h2>
+            <ul style="list-style-image: url('images/bullet.jpg');">
+                <li>Incorporate interactive storytelling to enhance comprehension.</li>
+                <li>Encourage collaborative problem-solving exercises.</li>
+                <li>Monitor emotional responses and provide guided support.</li>
+            </ul>
+        </div>
+
+        <p>We also explore technology integration in modern classrooms. Digital tools, when used thoughtfully, can enhance engagement and provide new avenues for differentiated instruction. However, balance remains key; traditional learning methods still provide irreplaceable value, ensuring that students develop critical thinking and social interaction skills in tandem with digital literacy.</p>
+
+        <hr style="width:80%; border:4px solid #457b9d; border-radius:6px;">
+        <p class="small-text">Fall 2025 by Kyeanna N Zane Mitchell</p>
+    </main>
+
+    <footer>
+        &copy; 2025 ACME Educational Insights | <a href="contact.htm">Contact Us</a>
+    </footer>
+</body>
+</html>
