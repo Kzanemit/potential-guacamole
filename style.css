@@ -3,8 +3,8 @@ body {
   max-width: 1000px;
   margin: auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f4f8; /* Light, calming background */
-  color: #1b263b; /* Deep blue for text, easy on the eyes */
+  background-color: #f0f4f8;
+  color: #1b263b;
   line-height: 1.6;
   padding: 20px;
 }
@@ -97,11 +97,6 @@ ul.list-image li {
   list-style-image: url('images/bullet.png');
 }
 
-ul.news-bullets {
-  list-style-image: url('images/bullet.jpg');
-  padding-left: 20px;
-}
-
 ol {
   margin-left: 20px;
   list-style-type: upper-roman;
@@ -188,7 +183,7 @@ footer a {
 
 #figureContainer figure:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 #figureContainer img {
@@ -204,7 +199,6 @@ footer a {
   background-color: #e0f7fa;
 }
 
-/* Responsive columns for portfolio */
 @media only screen and (max-width: 720px) {
   #figureContainer figure {
     width: 90%;
@@ -239,17 +233,52 @@ footer a {
 
 .box {
   border: 2px solid #457b9d;
-  padding: 15px;
+  padding: 20px;
   margin: 20px 0;
   background-color: #f1faee;
   border-radius: 8px;
   text-align: justify;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* CSS3 hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.box h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #1b263b;
+}
+
+.box p {
+  margin-bottom: 10px;
+}
+
+/* Custom bullet icons */
+ul.news-bullets {
+  list-style: none;
+  padding-left: 25px;
+}
+
+ul.news-bullets li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 25px;
+}
+
+ul.news-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background-image: url('images/bullet.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 blockquote {
