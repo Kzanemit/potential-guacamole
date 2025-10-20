@@ -13,20 +13,25 @@ body {
 header {
   text-align: center;
   padding: 20px 0;
-  background: linear-gradient(90deg, #a8dadc, #457b9d); /* Soothing gradient */
+  background: linear-gradient(90deg, #a8dadc, #457b9d);
   border-radius: 10px;
 }
 
 header h1 {
   font-size: 2.2em;
   margin-bottom: 5px;
-  color: #ffffff; /* White for contrast */
+  color: #ffffff;
 }
 
 header h2 {
   font-size: 1.4em;
   font-weight: normal;
-  color: #e0f7fa; /* Light calm accent */
+  color: #e0f7fa;
+}
+
+header img {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
 
 /* Navigation */
@@ -49,14 +54,21 @@ nav a {
   transition: background-color 0.3s, color 0.3s;
 }
 
-nav a:hover, nav a.selected {
-  background-color: #1d3557; /* Deep blue for selected */
-  color: #f1faee; /* Soft highlight */
+nav a:hover {
+  color: #f1faee;
+  background-color: #457b9d;
+  text-decoration: underline;
+}
+
+nav a .selected {
+  color: #f1faee;
+  background-color: #1d3557;
+  font-weight: bold;
 }
 
 /* Main Content & Sections */
 main {
-  background-color: #e0f7fa; /* Light calm background */
+  background-color: #e0f7fa;
   padding: 20px;
   border-radius: 10px;
   margin-top: 20px;
@@ -69,8 +81,8 @@ section {
 
 h2 {
   font-size: 1.8em;
-  color: #457b9d; /* Calm blue for headings */
-  border-bottom: 2px solid #a8dadc; /* Soft border */
+  color: #457b9d;
+  border-bottom: 2px solid #a8dadc;
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
@@ -85,6 +97,11 @@ ul.list-image li {
   list-style-image: url('images/bullet.png');
 }
 
+ul.news-bullets {
+  list-style-image: url('images/bullet.jpg');
+  padding-left: 20px;
+}
+
 ol {
   margin-left: 20px;
   list-style-type: upper-roman;
@@ -95,7 +112,7 @@ img.profile-photo {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid #457b9d; /* Calming blue border */
+  border: 3px solid #457b9d;
   display: block;
   margin: auto;
 }
@@ -106,7 +123,7 @@ img.brain {
   display: block;
   margin: 20px auto;
   border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.15); /* Softer shadow */
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
 }
 
 /* Footer */
@@ -134,6 +151,7 @@ footer a {
 .small-text {
   font-size: 0.85em;
   color: #6c757d;
+  text-align: center;
 }
 
 /* Skill Grid */
@@ -163,7 +181,7 @@ footer a {
   margin: 5px;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #ffffff; /* Light cards for images */
+  background-color: #ffffff;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -183,7 +201,7 @@ footer a {
   padding: 8px;
   font-size: 1em;
   color: #1b263b;
-  background-color: #e0f7fa; /* Calm caption background */
+  background-color: #e0f7fa;
 }
 
 /* Responsive columns for portfolio */
@@ -201,7 +219,51 @@ footer a {
 
 @media only screen and (min-width: 1000px) {
   #figureContainer figure {
-    width: 320px; /* 2–3 columns depending on screen width */
+    width: 320px;
   }
 }
 
+/* ==========================
+   Newsletter Specific Styles
+=========================== */
+.infobar {
+  background-color: #1d3557;
+  color: #f1faee;
+  text-align: center;
+  padding: 12px 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 1.1em;
+}
+
+.box {
+  border: 2px solid #457b9d;
+  padding: 15px;
+  margin: 20px 0;
+  background-color: #f1faee;
+  border-radius: 8px;
+  text-align: justify;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* CSS3 hover effect */
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+blockquote {
+  text-align: justify;
+  background-color: #a8dadc;
+  padding: 12px 20px;
+  border-left: 5px solid #457b9d;
+  margin: 20px 0;
+  border-radius: 5px;
+  font-style: italic;
+}
+
+blockquote:first-letter {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #1b263b;
+}
