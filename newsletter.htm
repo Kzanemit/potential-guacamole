@@ -3,58 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Quarterly Newsletter covering child psychology topics and updates from our educational team.">
-    <title>ACME Quarterly Newsletter</title>
+    <meta name="description" content="Quarterly Newsletter by Kyeanna Zane Mitchell covering child psychology topics and updates from my educational journey.">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Quarterly Newsletter - Kyeanna Zane Mitchell</title>
 </head>
 <body>
     <header>
-        <img src="images/newsletter-banner.png" alt="Newsletter Banner" style="width:100%; border-radius:10px;">
-        <h1>ACME Quarterly Newsletter</h1>
+        <img src="images/newsletter-banner.png" alt="Newsletter Banner" class="brain">
+        <h1>Kyeanna Zane Mitchell Quarterly Newsletter</h1>
         <h2>Fall 2025 Edition</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link" id="home-link">Home</a></li>
+                <li><a href="Resume.htm" class="nav-link" id="resume-link">Resume</a></li>
+                <li><a href="portfolio.htm" class="nav-link" id="portfolio-link">Portfolio</a></li>
+                <li><a href="transcript.htm" class="nav-link" id="transcript-link">Transcript</a></li>
+                <li><a href="newsletter.htm" class="nav-link" id="newsletter-link">Newsletter</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.htm">Home</a></li>
-            <li><a href="resume.htm">Resume</a></li>
-            <li><a href="portfolio.htm">Portfolio</a></li>
-            <li><a href="newsletter.htm"><span class="selected">Newsletter</span></a></li>
-            <li><a href="contact.htm">Contact</a></li>
-        </ul>
-    </nav>
 
     <main>
         <div class="infobar">
-            &nbsp;Web Seminar in Sarasota&nbsp;
+            Recent Updates in Child Development
         </div>
 
-        <h2>Child Development Insights</h2>
-        <p>Understanding the cognitive and emotional growth of children has never been more crucial. In this edition, we explore the latest findings in child psychology and how educators and parents can apply these insights to foster better learning environments. From early childhood milestones to adolescent cognitive development, our team delves into practical strategies that can be implemented in classrooms and homes alike.</p>
-
-        <p>Recent studies highlight the importance of social and emotional learning alongside traditional academics. Children benefit from structured activities that build communication, empathy, and problem-solving skills. Our quarterly review presents evidence-based practices that educators can integrate into daily lessons, promoting both intellectual and emotional growth.</p>
+        <section>
+            <h2>Child Development Insights</h2>
+            <p>As an aspiring developmental psychologist, I explore the latest findings in child psychology and how educators and parents can support children’s cognitive, social, and emotional growth. From early childhood milestones to adolescent development, I focus on practical strategies that can be applied in classrooms and homes.</p>
+            <p>Research highlights the importance of social and emotional learning alongside traditional academics. Children benefit from structured activities that build communication, empathy, and problem-solving skills. My newsletter presents evidence-based practices that can be integrated into daily lessons, promoting both intellectual and emotional development.</p>
+        </section>
 
         <blockquote>
-            Investing in a child's development today creates the foundation for tomorrow's success. Our research emphasizes personalized learning approaches, ensuring each child reaches their full potential.
+            Investing in a child's development today lays the foundation for tomorrow's success. Personalized learning approaches ensure each child reaches their full potential.
         </blockquote>
 
-        <div class="box">
-            <h2>Special Tips for Educators</h2>
-            <ul style="list-style-image: url('images/bullet.jpg');">
+        <section class="box">
+            <h2>Tips for Educators and Caregivers</h2>
+            <ul class="news-bullets">
                 <li>Incorporate interactive storytelling to enhance comprehension.</li>
                 <li>Encourage collaborative problem-solving exercises.</li>
-                <li>Monitor emotional responses and provide guided support.</li>
+                <li>Observe emotional responses and provide guided support.</li>
             </ul>
-        </div>
+        </section>
 
-        <p>We also explore technology integration in modern classrooms. Digital tools, when used thoughtfully, can enhance engagement and provide new avenues for differentiated instruction. However, balance remains key; traditional learning methods still provide irreplaceable value, ensuring that students develop critical thinking and social interaction skills in tandem with digital literacy.</p>
+        <section>
+            <p>Technology can enhance engagement in modern classrooms when used thoughtfully, providing new avenues for differentiated instruction. However, balance remains essential; traditional methods help students develop critical thinking and social interaction skills in tandem with digital literacy.</p>
+        </section>
 
-        <hr style="width:80%; border:4px solid #457b9d; border-radius:6px;">
-        <p class="small-text">Fall 2025 by Kyeanna N Zane Mitchell</p>
+        <hr>
+        <p class="small-text">Fall 2025 | Written by Kyeanna N Zane Mitchell</p>
     </main>
 
     <footer>
-        &copy; 2025 ACME Educational Insights | <a href="contact.htm">Contact Us</a>
+        &copy; 2025 Kyeanna Zane Mitchell | <a href="contact.htm">Contact Me</a>
     </footer>
+
+    <script>
+      const page = window.location.pathname.split("/").pop();
+      if(page === "index.html") document.getElementById("home-link").classList.add("selected");
+      if(page === "Resume.htm") document.getElementById("resume-link").classList.add("selected");
+      if(page === "portfolio.htm") document.getElementById("portfolio-link").classList.add("selected");
+      if(page === "transcript.htm") document.getElementById("transcript-link").classList.add("selected");
+      if(page === "newsletter.htm") document.getElementById("newsletter-link").classList.add("selected");
+    </script>
 </body>
 </html>
