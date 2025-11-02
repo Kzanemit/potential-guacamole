@@ -1,45 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Message Sent | Kyeanna Zane Mitchell</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="author" content="Kyeanna N Zane Mitchell">
+    <meta name="description" content="Thank you page confirming the contact form submission.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Kyeanna N Zane Mitchell</title>
+    <link href="yourSiteName.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
-  <header>
-    <h1>Kyeanna Zane Mitchell</h1>
+    <header>
+        <h1>Kyeanna N Zane Mitchell</h1>
+    </header>
+
     <nav>
-      <ul>
-        <li><a href="index.html" class="nav-link" id="home-link">Home</a></li>
-        <li><a href="Resume.htm" class="nav-link" id="resume-link">Resume</a></li>
-        <li><a href="portfolio.htm" class="nav-link" id="portfolio-link">Portfolio</a></li>
-        <li><a href="transcript.htm" class="nav-link" id="transcript-link">Transcript</a></li>
-        <li><a href="newsletter.htm" class="nav-link" id="newsletter-link">Newsletter</a></li>
-        <li><a href="contact.htm" class="nav-link" id="contact-link">Contact</a></li>
-      </ul>
+        <ul>
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="resume.htm">Resume</a></li>
+            <li><a href="portfolio.htm">Portfolio</a></li>
+            <li><a href="newsletter.htm">Newsletter</a></li>
+            <li><a class="selected" href="contact.htm">Contact</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <main>
-    <h2>Thank You!</h2>
-    <p>Your message has been successfully sent. I appreciate you reaching out and will respond as soon as possible.</p>
-    <p><a href="index.html">Return to Home</a></p>
-  </main>
+    <main>
+        <section style="text-align:center; margin-top:50px;">
+            <h2>Thank You!</h2>
+            <p>Your message has been successfully sent. We will get back to you as soon as possible.</p>
+            <p><a href="index.htm">Return to Home Page</a></p>
+        </section>
+    </main>
 
-  <footer>
-    &copy; 2025 Kyeanna Zane Mitchell
-  </footer>
-
-  <script>
-    const page = window.location.pathname.split("/").pop();
-    if(page === "index.html") document.getElementById("home-link").classList.add("selected");
-    if(page === "Resume.htm") document.getElementById("resume-link").classList.add("selected");
-    if(page === "portfolio.htm") document.getElementById("portfolio-link").classList.add("selected");
-    if(page === "transcript.htm") document.getElementById("transcript-link").classList.add("selected");
-    if(page === "newsletter.htm") document.getElementById("newsletter-link").classList.add("selected");
-    if(page === "contact.htm") document.getElementById("contact-link").classList.add("selected");
-  </script>
+    <footer>
+        <p>&copy; 2025 Kyeanna N Zane Mitchell</p>
+    </footer>
 </body>
 </html>
