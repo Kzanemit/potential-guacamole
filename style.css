@@ -1,391 +1,187 @@
-/* ==========================
-   General Body Styles
-========================== */
+/* ============================= */
+/* General Body Styles           */
+/* ============================= */
 body {
-  max-width: 1000px;
-  margin: auto;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f4f8;
-  color: #1b263b;
-  line-height: 1.6;
-  padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8; /* Light, calming background */
+    color: #1b263b; /* Deep text color */
+    line-height: 1.6;
+    padding: 0 20px;
 }
 
-/* ==========================
-   Header Styles
-========================== */
+/* ============================= */
+/* Header and Masthead           */
+/* ============================= */
 header {
-  text-align: center;
-  padding: 20px 0;
-  background: linear-gradient(90deg, #a8dadc, #457b9d);
-  border-radius: 10px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1b263b;
+    color: white;
 }
 
 header h1 {
-  font-size: 2.2em;
-  margin-bottom: 5px;
-  color: #ffffff;
+    margin: 0;
+    font-size: 2em;
 }
 
-header h2 {
-  font-size: 1.4em;
-  font-weight: normal;
-  color: #e0f7fa;
-  margin-bottom: 15px;
+/* ============================= */
+/* Navigation Menu               */
+/* ============================= */
+nav {
+    margin: 20px 0;
+    text-align: center;
 }
 
-header img {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 15px auto;
-}
-
-/* ==========================
-   Navigation Styles
-========================== */
 nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-nav a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #ffffff;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
 }
 
-nav a:hover {
-  color: #f1faee;
-  background-color: #1d3557;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+nav ul li a {
+    text-decoration: none;
+    color: #1b263b;
+    font-weight: bold;
 }
 
-nav a.selected {
-  color: #f1faee;
-  background-color: #1d3557;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+nav ul li a.selected,
+nav ul li a:hover {
+    color: #f0f4f8;
+    background-color: #1b263b;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-/* Mobile Navigation */
-@media only screen and (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav a {
-    padding: 10px 20px;
-    font-size: 1em;
-  }
-}
-
-/* ==========================
-   Main Content & Sections
-========================== */
+/* ============================= */
+/* Main Content                 */
+/* ============================= */
 main {
-  background-color: #e0f7fa;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    margin: 20px 0;
 }
 
-section {
-  margin-bottom: 30px;
+/* ============================= */
+/* Tables (for contact form)     */
+/* ============================= */
+table {
+    border: 2px solid #1b263b;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
-h2 {
-  font-size: 1.8em;
-  color: #457b9d;
-  border-bottom: 2px solid #a8dadc;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
+table th,
+table td {
+    border: 1px solid #1b263b;
+    padding: 8px;
 }
 
-/* Lists */
-ul.square-list {
-  list-style: square inside;
+table th {
+    background-color: #1b263b;
+    color: white;
+    text-align: center;
+    font-size: 1.1em;
 }
 
-ul.list-image li {
-  margin-bottom: 5px;
-  list-style-image: url('images/bullet.png');
+/* Right-align the first column in forms */
+table td:first-child {
+    text-align: right;
+    vertical-align: top;
+    font-weight: bold;
+    padding-right: 10px;
 }
 
-ol {
-  margin-left: 20px;
-  list-style-type: upper-roman;
+/* ============================= */
+/* Form Inputs and Textareas      */
+/* ============================= */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 95%;
+    max-width: 350px;
+    padding: 5px;
+    border: 1px solid #1b263b;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 1em;
+    box-sizing: border-box;
 }
 
-/* ==========================
-   Images
-========================== */
-img.profile-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid #457b9d;
-  display: block;
-  margin: auto;
+/* Textarea specific adjustments */
+textarea {
+    resize: vertical;
 }
 
-img.brain {
-  width: 100%;
-  max-width: 600px;
-  display: block;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+/* ============================= */
+/* Required Fields               */
+/* ============================= */
+.required {
+    color: red;
+    font-weight: bold;
 }
 
-/* ==========================
-   Footer
-========================== */
+/* ============================= */
+/* Buttons                       */
+/* ============================= */
+input[type="submit"],
+input[type="reset"] {
+    background-color: #1b263b;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #3b4a6b;
+}
+
+/* ============================= */
+/* Footer                        */
+/* ============================= */
 footer {
-  text-align: center;
-  margin-top: 40px;
-  padding: 15px;
-  background-color: #457b9d;
-  border-radius: 10px;
-  color: #ffffff;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 0.9em;
+    color: #1b263b;
 }
 
-footer a {
-  color: #a8dadc;
-  font-weight: bold;
-}
+/* ============================= */
+/* Responsive Adjustments        */
+/* ============================= */
+@media (max-width: 700px) {
+    table, table th, table td {
+        display: block;
+        width: 100%;
+    }
 
-/* ==========================
-   Extras
-========================== */
-.special {
-  color: #1b263b;
-  font-weight: bold;
-  font-size: 1.2em;
-}
+    table td:first-child {
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 5px;
+    }
 
-.small-text {
-  font-size: 0.85em;
-  color: #6c757d;
-  text-align: center;
-}
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 
-/* Skill Grid */
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-  margin-top: 10px;
-}
-
-/* ==========================
-   Portfolio Page Styles
-========================== */
-#figureContainer {
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-#figureContainer figure {
-  width: 320px;
-  display: inline-block;
-  text-align: center;
-  margin: 5px;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #ffffff;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-#figureContainer figure:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-#figureContainer img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-#figureContainer figcaption {
-  padding: 8px;
-  font-size: 1em;
-  color: #1b263b;
-  background-color: #e0f7fa;
-}
-
-/* Responsive Portfolio */
-@media only screen and (max-width: 720px) {
-  #figureContainer figure {
-    width: 90%;
-  }
-}
-
-@media only screen and (min-width: 721px) and (max-width: 999px) {
-  #figureContainer figure {
-    width: 45%;
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  #figureContainer figure {
-    width: 320px;
-  }
-}
-
-/* ==========================
-   Newsletter Specific Styles
-========================== */
-.infobar {
-  background-color: #1d3557;
-  color: #f1faee;
-  text-align: center;
-  padding: 12px 0;
-  margin-bottom: 20px;
-  font-weight: bold;
-  border-radius: 8px;
-  font-size: 1.1em;
-}
-
-.box {
-  border: 2px solid #457b9d;
-  padding: 20px;
-  margin: 20px 0;
-  background-color: #f1faee;
-  border-radius: 8px;
-  text-align: justify;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.box:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
-
-.box h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #1b263b;
-}
-
-.box p {
-  margin-bottom: 10px;
-}
-
-/* Custom bullet icons */
-ul.news-bullets {
-  list-style: none;
-  padding-left: 25px;
-}
-
-ul.news-bullets li {
-  position: relative;
-  margin-bottom: 10px;
-  padding-left: 25px;
-}
-
-ul.news-bullets li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 12px;
-  height: 12px;
-  background-image: url('images/bullet.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-blockquote {
-  text-align: justify;
-  background-color: #a8dadc;
-  padding: 12px 20px;
-  border-left: 5px solid #457b9d;
-  margin: 20px 0;
-  border-radius: 5px;
-  font-style: italic;
-}
-
-blockquote:first-letter {
-  font-size: 1.8em;
-  font-weight: bold;
-  color: #1b263b;
-}
-
-/* ==========================
-   Contact Page Styles
-========================== */
-.contact-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  background-color: #f1faee;
-  border: 2px solid #457b9d;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-}
-
-.contact-table th,
-.contact-table td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #a8dadc;
-}
-
-.contact-table th {
-  width: 30%;
-  color: #1b263b;
-  font-weight: bold;
-}
-
-.contact-table input,
-.contact-table textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #a8dadc;
-  border-radius: 5px;
-  font-family: inherit;
-  font-size: 1em;
-}
-
-.contact-table input:focus,
-.contact-table textarea:focus {
-  border-color: #457b9d;
-  outline: none;
-  box-shadow: 0 0 4px #457b9d;
-}
-
-.contact-table button {
-  background-color: #457b9d;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.contact-table button:hover {
-  background-color: #1d3557;
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        width: 100%;
+    }
 }
