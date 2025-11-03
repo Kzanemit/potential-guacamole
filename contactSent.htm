@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="author" content="Kyeanna Zane Mitchell">
-  <meta name="description" content="Contact page for Kyeanna Zane Mitchell’s portfolio site. Get in touch via this contact form for inquiries or collaborations.">
+  <meta name="description" content="Confirmation page after sending the contact form. Thank you for reaching out.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Kyeanna Zane Mitchell</title>
+  <title>Message Sent | Kyeanna Zane Mitchell</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,82 +24,9 @@
   </header>
 
   <main>
-    <h2>Contact Me</h2>
-    <p>If you have any questions, feedback, or collaboration ideas, please fill out the form below. Fields marked with <span class="required">*</span> are required.</p>
-
-    <form name="contactForm" id="contactForm" action="FormProcess.php" method="post">
-      <input type="hidden" name="subject" value="Portfolio Contact Submission">
-      <input type="hidden" name="redirect" value="contactSent.htm">
-
-      <table class="contact-table">
-        <tr>
-          <td style="text-align:right"><label for="FirstName"><span class="required">*</span> First Name:</label></td>
-          <td><input type="text" name="FirstName" id="FirstName" size="40" required></td>
-        </tr>
-
-        <tr>
-          <td style="text-align:right"><label for="LastName"><span class="required">*</span> Last Name:</label></td>
-          <td><input type="text" name="LastName" id="LastName" size="40" required></td>
-        </tr>
-
-        <tr>
-          <td style="text-align:right"><label for="City">City:</label></td>
-          <td><input type="text" name="City" id="City" size="40"></td>
-        </tr>
-
-        <tr>
-          <td style="text-align:right"><label for="ST">State:</label></td>
-          <td>
-            <select name="ST" id="ST" required>
-              <option value="FL" selected>Florida</option>
-              <option value="GA">Georgia</option>
-              <option value="AL">Alabama</option>
-              <option value="NY">New York</option>
-              <option value="CA">California</option>
-            </select>
-          </td>
-        </tr>
-
-        <tr>
-          <td style="text-align:right"><label for="Zip">Zip:</label></td>
-          <td><input type="text" name="Zip" id="Zip" pattern="[0-9]{5}" title="Five digit zip code" size="10"></td>
-        </tr>
-
-        <tr>
-          <td style="text-align:right"><label for="Email"><span class="required">*</span> Email:</label></td>
-          <td><input type="email" name="Email" id="Email" size="40" required></td>
-        </tr>
-
-        <tr>
-          <td style="text-align:right"><label>Gender:</label></td>
-          <td>
-            <input type="radio" name="Gender" id="M" value="M"> <label for="M">M</label>
-            <input type="radio" name="Gender" id="F" value="F"> <label for="F">F</label>
-          </td>
-        </tr>
-
-        <tr>
-          <td style="text-align:right"><label>Education:</label></td>
-          <td>
-            <input type="checkbox" name="HS" id="HS" value="HS"> <label for="HS">H.S.</label>
-            <input type="checkbox" name="College" id="College" value="College"> <label for="College">College</label>
-          </td>
-        </tr>
-
-        <tr>
-          <td style="text-align:right"><label for="Comments"><span class="required">*</span> Comments:</label></td>
-          <td><textarea name="Comments" id="Comments" cols="42" rows="5" placeholder="Please provide feedback or inquiries here..." required></textarea></td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td>
-            <input type="reset" value="Reset">
-            <input type="submit" value="Submit">
-          </td>
-        </tr>
-      </table>
-    </form>
+    <h2>Thank You!</h2>
+    <p>Your message has been successfully sent. I appreciate you taking the time to reach out, and I’ll respond as soon as possible.</p>
+    <p><a href="index.html" class="button">Return to Home</a></p>
   </main>
 
   <footer>
