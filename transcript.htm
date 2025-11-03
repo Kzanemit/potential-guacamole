@@ -13,11 +13,12 @@
     <h2>Kyeanna Zane Mitchell</h2>
     <nav>
       <ul>
-        <li><a href="index.html" class="nav-link" id="home-link">Home</a></li>
-        <li><a href="Resume.htm" class="nav-link" id="resume-link">Resume</a></li>
-        <li><a href="portfolio.htm" class="nav-link" id="portfolio-link">Portfolio</a></li>
-        <li><a href="transcript.htm" class="nav-link" id="transcript-link">Transcript</a></li>
-        <li><a href="newsletter.htm" class="nav-link" id="newsletter-link">Newsletter</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Resume.htm">Resume</a></li>
+        <li><a href="portfolio.htm">Portfolio</a></li>
+        <li><a href="transcript.htm" class="selected">Transcript</a></li>
+        <li><a href="newsletter.htm">Newsletter</a></li>
+        <li><a href="contact.htm">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -39,7 +40,7 @@
 
     <section>
       <h2>Professors for Recommendation</h2>
-      <ul class="list-image">
+      <ul>
         <li>Gladys Greeen – Psychology Department</li>
         <li>Rodger Tornai – English Department</li>
       </ul>
@@ -47,7 +48,7 @@
 
     <section>
       <h2>References</h2>
-      <ol style="list-style-type: upper-roman;" start="2">
+      <ol>
         <li>Mary Riviera, Supervisor, Freedom Village – (941) 555-1234</li>
         <li>David Venable, Civil Air Patrol Leader – (941) 555-5678</li>
       </ol>
@@ -65,8 +66,7 @@
       <h2>Extras</h2>
       <p>Water formula: H<sub>2</sub>O</p>
       <p>Area of a square: a<sup>2</sup></p>
-      <p>Temperature: 98<span class="special">&deg;</span>F</p>
-      <p>Copyright <span class="special">&copy;</span> 2025 Kyeanna Zane Mitchell</p>
+      <p>Temperature: 98° F</p>
     </section>
   </main>
 
@@ -74,14 +74,5 @@
     &copy; 2025 Kyeanna Zane Mitchell
   </footer>
 </div>
-
-<script>
-  const page = window.location.pathname.split("/").pop();
-  if(page === "index.html") document.getElementById("home-link").classList.add("selected");
-  if(page === "Resume.htm") document.getElementById("resume-link").classList.add("selected");
-  if(page === "portfolio.htm") document.getElementById("portfolio-link").classList.add("selected");
-  if(page === "transcript.htm") document.getElementById("transcript-link").classList.add("selected");
-  if(page === "newsletter.htm") document.getElementById("newsletter-link").classList.add("selected");
-</script>
 </body>
 </html>
