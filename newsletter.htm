@@ -14,59 +14,48 @@
         <h2>Fall 2025 Edition</h2>
         <nav>
             <ul>
-                <li><a href="index.html" class="nav-link" id="home-link">Home</a></li>
-                <li><a href="Resume.htm" class="nav-link" id="resume-link">Resume</a></li>
-                <li><a href="portfolio.htm" class="nav-link" id="portfolio-link">Portfolio</a></li>
-                <li><a href="transcript.htm" class="nav-link" id="transcript-link">Transcript</a></li>
-                <li><a href="newsletter.htm" class="nav-link" id="newsletter-link">Newsletter</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Resume.htm">Resume</a></li>
+                <li><a href="portfolio.htm">Portfolio</a></li>
+                <li><a href="transcript.htm">Transcript</a></li>
+                <li><a href="newsletter.htm" class="selected">Newsletter</a></li>
+                <li><a href="contact.htm">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="infobar">
-            Recent Updates in Child Development
-        </div>
+        <div class="infobar">Recent Updates in Child Development</div>
 
         <section>
             <h2>Child Development Insights</h2>
-            <p>As an aspiring developmental psychologist, I try to embark on exploring all aspects of child development, whether that is the differences in development for parent-child interactions or child-teacher interactions.. I explore all realms of development and examine how it specifically affects the child. I particularly enjoy exploring different milestones and how they can contribute to strategies for enhancing a child's growth at home and in the classroom.</p>
-            <p>Many forms of research highlight the importance of social and emotional learning, with some traditional factors. This all ties together to help build a better foundation for the child, not only in their academic growth but also in their socioemotional development. My newsletter presents practices that can be incorporated into daily lessons for teachers, promoting intellectual and emotional growth tailored to children.</p>
+            <p>As an aspiring developmental psychologist, I explore all aspects of child development, whether in parent-child or teacher-child interactions. Understanding developmental milestones helps me identify strategies for improving learning and emotional growth.</p>
+            <p>Research emphasizes the importance of social and emotional learning. This newsletter highlights practical methods teachers and caregivers can use to foster academic and emotional well-being.</p>
         </section>
 
         <blockquote>
-            Investing in a child's development today lays the foundation for tomorrow's success. Personalized learning approaches ensure each child reaches their full potential.
+            Investing in a child's development today lays the foundation for tomorrow's success. Personalized learning ensures each child reaches their full potential.
         </blockquote>
 
-        <section class="box" style="display:flex; flex-direction:column; gap:10px;">
+        <section class="box">
             <h2>Tips for Educators and Caregivers</h2>
-            <p>These practical strategies help children thrive academically and emotionally:</p>
-            <ul class="news-bullets" style="padding-left:20px;">
-                <li>Incorporate interactive storytelling to enhance comprehension.</li>
-                <li>Encourage collaborative problem-solving exercises.</li>
-                <li>Observe emotional responses and provide guided support.</li>
+            <ul class="news-bullets">
+                <li>Use interactive storytelling to improve comprehension.</li>
+                <li>Encourage teamwork and peer collaboration.</li>
+                <li>Pay attention to emotional responses and offer support.</li>
             </ul>
         </section>
 
         <section>
-            <p>While technology can be a tool used to promote successful learning and growth in the education system, it is not recommended to be used as a primary tool. It should, in all forms, be used in moderation and only for the benefit of a child's academic growth. It is vital when trying to educate them on the dangers of the internet. However, children need to keep this growth, as time away from electronics also helps to bring them a better foundation for their social development, especially when it comes to interacting with other peers.</p>
+            <p>Technology should enhance — not replace — hands-on learning. Balanced use fosters focus, curiosity, and healthier social skills among children.</p>
         </section>
 
         <hr>
-        <p class="small-text">Fall 2025 | Written by Kyeanna N Zane Mitchell</p>
+        <p class="small-text">Fall 2025 | Written by Kyeanna N. Zane Mitchell</p>
     </main>
 
     <footer>
         &copy; 2025 Kyeanna Zane Mitchell | <a href="contact.htm">Contact Me</a>
     </footer>
-
-    <script>
-      const page = window.location.pathname.split("/").pop();
-      if(page === "index.html") document.getElementById("home-link").classList.add("selected");
-      if(page === "Resume.htm") document.getElementById("resume-link").classList.add("selected");
-      if(page === "portfolio.htm") document.getElementById("portfolio-link").classList.add("selected");
-      if(page === "transcript.htm") document.getElementById("transcript-link").classList.add("selected");
-      if(page === "newsletter.htm") document.getElementById("newsletter-link").classList.add("selected");
-    </script>
 </body>
 </html>
