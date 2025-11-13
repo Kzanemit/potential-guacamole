@@ -12,40 +12,46 @@
 <body>
   <header>
     <h1>JavaScript Interactivity Showcase</h1>
- <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="resume.htm">Resume</a></li>
-    <li><a href="portfolio.htm">Portfolio</a></li>
-    <li><a href="transcript.htm">Transcript</a></li>
-    <li><a href="newsletter.htm">Newsletter</a></li>
-    <li><a href="contact.htm">Contact</a></li>
-    <li><a href="js.htm">JavaScript</a></li>
-  </ul>
-</nav>
+    <nav>
+      <ul>
+        <li><a href="index.htm">Home</a></li>
+        <li><a href="resume.htm">Resume</a></li>
+        <li><a href="portfolio.htm">Portfolio</a></li>
+        <li><a href="transcript.htm">Transcript</a></li>
+        <li><a href="newsletter.htm">Newsletter</a></li>
+        <li><a href="contact.htm">Contact</a></li>
+        <li><a href="js.htm">JavaScript</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
+    <!-- 1. Pop-Up Message -->
     <section>
       <h2>1. Pop-Up Message</h2>
-      <p>This button opens a custom HTML pop-up window.</p>
-      <button onclick="window.open('popup-message.html', 'popup', 'width=400,height=300');">Open Pop-Up</button>
+      <p>This button opens a custom JavaScript pop-up window.</p>
+      <button onclick="window.open('popup-message.html', 'popup', 'width=400,height=300');">
+        Open Pop-Up
+      </button>
     </section>
 
+    <!-- 2. Change Background Color -->
     <section>
       <h2>2. Change Background Color</h2>
-      <p>Click to randomize the background color!</p>
+      <p>Click the button to randomize the background color of the page!</p>
       <button onclick="changeColor()">Change Color</button>
     </section>
 
+    <!-- 3. Image Swap on Hover -->
     <section>
       <h2>3. Image Swap</h2>
       <p>Hover over the image to see it change.</p>
-      <img id="swapImage" src="images/pic1.png" alt="Sample Image" width="300"
+      <img id="swapImage" src="images/pic1.png" alt="My First Image" width="300"
            onmouseover="this.src='images/pic2.png'"
            onmouseout="this.src='images/pic1.png'">
     </section>
- <!-- 4. Last Updated Date -->
+
+    <!-- 4. Last Updated Date -->
     <section>
       <h2>4. Last Updated</h2>
       <p style="font-size: smaller;">
@@ -55,34 +61,33 @@
         </script>
       </p>
     </section>
+
+    <!-- 5. Simple Calculator -->
     <section>
-      <h2>4. Simple Calculator</h2>
-      <p>Enter two numbers:</p>
+      <h2>5. Simple Calculator</h2>
+      <p>Enter two numbers and click "Add":</p>
       <input type="number" id="num1" placeholder="Number 1">
       <input type="number" id="num2" placeholder="Number 2">
       <button onclick="calculate()">Add</button>
       <p id="calcResult"></p>
     </section>
 
+    <!-- 6. Slideshow (External JS) -->
     <section>
-      <h2>5. Slideshow (External JS)</h2>
+      <h2>6. Slideshow (External JS)</h2>
       <div id="slideshow" class="slideshow-box"></div>
       <script src="scripts/externalSlideshow.js"></script>
     </section>
 
-    <section>
-      <h2>6. Display Current Date</h2>
-      <button onclick="showDate()">Show Date</button>
-      <p id="dateDisplay"></p>
-    </section>
-
+    <!-- 7. Word Counter -->
     <section>
       <h2>7. Word Counter</h2>
-      <textarea id="textInput" rows="4" cols="40" placeholder="Type something..."></textarea>
+      <textarea id="textInput" rows="4" cols="40" placeholder="Type something here..."></textarea>
       <p><button onclick="countWords()">Count Words</button></p>
       <p id="wordCount"></p>
     </section>
 
+    <!-- 8. Hover Effect Box -->
     <section>
       <h2>8. Hover Effect Box</h2>
       <div id="hoverBox" class="hover-box">Hover over me!</div>
@@ -94,33 +99,32 @@
   </footer>
 
   <script>
-    /* 2. Background Color Changer */
+    // 2. Background Color Changer
     function changeColor() {
       const colors = ['#c1e1c1', '#f9d5e5', '#f0e68c', '#add8e6', '#dda0dd'];
       document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
     }
 
-    /* 4. Simple Calculator */
+    // 5. Simple Calculator
     function calculate() {
       const n1 = parseFloat(document.getElementById('num1').value);
       const n2 = parseFloat(document.getElementById('num2').value);
-      const result = n1 + n2;
-      document.getElementById('calcResult').innerText = `Result: ${result}`;
+      if (!isNaN(n1) && !isNaN(n2)) {
+        const result = n1 + n2;
+        document.getElementById('calcResult').innerText = `Result: ${result}`;
+      } else {
+        document.getElementById('calcResult').innerText = 'Please enter valid numbers!';
+      }
     }
 
-    /* 6. Show Date */
-    function showDate() {
-      document.getElementById('dateDisplay').innerText = new Date().toLocaleString();
-    }
-
-    /* 7. Word Counter */
+    // 7. Word Counter
     function countWords() {
       const text = document.getElementById('textInput').value.trim();
       const words = text ? text.split(/\s+/).length : 0;
       document.getElementById('wordCount').innerText = `Word Count: ${words}`;
     }
 
-    /* 8. Hover Effect Box */
+    // 8. Hover Effect Box
     const box = document.getElementById("hoverBox");
     box.addEventListener("mouseover", () => {
       box.style.backgroundColor = "#88c9bf";
