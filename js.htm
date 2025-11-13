@@ -3,122 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="author" content="Kyeanna Zane Mitchell">
-  <meta name="description" content="JavaScript interactive examples by Kyeanna Zane Mitchell. Learn and explore fun web features using JavaScript.">
+  <meta name="description" content="JavaScript demonstration page featuring 8 unique scripts for Kyeanna Zane Mitchell’s website.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript Demos | Kyeanna Zane Mitchell</title>
+  <title>JavaScript Demonstrations | Kyeanna Zane Mitchell</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header>
-    <h1>JavaScript Interactivity Showcase</h1>
+    <h1>Kyeanna Zane Mitchell — JavaScript Demonstrations</h1>
     <nav>
       <ul>
         <li><a href="index.htm">Home</a></li>
         <li><a href="portfolio.htm">Portfolio</a></li>
+        <li><a href="newsletter.htm">Newsletter</a></li>
         <li><a href="resume.htm">Résumé</a></li>
         <li><a href="contact.htm">Contact</a></li>
-        <li><a href="js.htm" class="active">JavaScript</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>1. Pop-Up Message</h2>
-      <p>This button opens a custom HTML pop-up window.</p>
-      <button onclick="window.open('popup-message.html', 'popup', 'width=400,height=300');">Open Pop-Up</button>
-    </section>
+    <h2>JavaScript Demonstration Page</h2>
+    <p>This page demonstrates eight different JavaScript functions used on websites.</p>
 
-    <section>
-      <h2>2. Change Background Color</h2>
-      <p>Click to randomize the background color!</p>
-      <button onclick="changeColor()">Change Color</button>
-    </section>
+    <ol>
 
-    <section>
-      <h2>3. Image Swap</h2>
-      <p>Hover over the image to see it change.</p>
-      <img id="swapImage" src="images/pic1.jpg" alt="Sample Image" width="300"
-           onmouseover="this.src='images/pic2.jpg'"
-           onmouseout="this.src='images/pic1.jpg'">
-    </section>
+      <!-- #1 Mouseover Alert -->
+      <li id="js1">
+        <h3>#1 Mouseover Alert</h3>
+        <p>Hover over this text to see a message about the site.</p>
+        <a href="#" onmouseover="alert('Thanks for visiting my site! Check out my portfolio next!');">Hover Here for Message</a>
+      </li>
 
-    <section>
-      <h2>4. Simple Calculator</h2>
-      <p>Enter two numbers:</p>
-      <input type="number" id="num1" placeholder="Number 1">
-      <input type="number" id="num2" placeholder="Number 2">
-      <button onclick="calculate()">Add</button>
-      <p id="calcResult"></p>
-    </section>
+      <!-- #2 Button Alert -->
+      <li id="js2">
+        <h3>#2 Button Alert</h3>
+        <p>Click the button below to get a special message.</p>
+        <input type="button" value="Click for Info" onclick="alert('JavaScript makes websites interactive!')" />
+      </li>
 
-    <section>
-      <h2>5. Slideshow (External JS)</h2>
-      <div id="slideshow" class="slideshow-box"></div>
-      <script src="scripts/externalSlideshow.js"></script>
-    </section>
+      <!-- #3 Prompt and Display -->
+      <li id="js3">
+        <h3>#3 Prompt & Display</h3>
+        <script>
+          let userName = prompt("Welcome! What’s your first name?");
+          if (userName) {
+            document.write("<p>Hello, " + userName + "! Thanks for exploring my JavaScript page!</p>");
+          } else {
+            document.write("<p>Hello there! Glad you're here!</p>");
+          }
+        </script>
+      </li>
 
-    <section>
-      <h2>6. Display Current Date</h2>
-      <button onclick="showDate()">Show Date</button>
-      <p id="dateDisplay"></p>
-    </section>
+      <!-- #4 document.write Last Updated -->
+      <li id="js4">
+        <h3>#4 Last Updated Message</h3>
+        <p>This shows when this page was last modified:</p>
+        <script>
+          let update = new Date(document.lastModified);
+          let month = update.getMonth() + 1;
+          let date = update.getDate();
+          let year = update.getFullYear();
+          document.write("<small>Last Updated - " + month + "/" + date + "/" + year + "</small>");
+        </script>
+      </li>
 
-    <section>
-      <h2>7. Word Counter</h2>
-      <textarea id="textInput" rows="4" cols="40" placeholder="Type something..."></textarea>
-      <p><button onclick="countWords()">Count Words</button></p>
-      <p id="wordCount"></p>
-    </section>
+      <!-- #5 Calculation Example -->
+      <li id="js5">
+        <h3>#5 Calculation Form</h3>
+        <p>Calculate the total cost of items in your cart:</p>
+        <form onsubmit="return false;">
+          <label>Item Price: $<input type="number" id="price" value="0"></label><br>
+          <label>Quantity: <input type="number" id="quantity" value="1"></label><br><br>
+          <button onclick="calculateTotal()">Calculate Total</button>
+          <p id="total"></p>
+        </form>
+        <script>
+          function calculateTotal() {
+            let price = document.getElementById('price').value;
+            let quantity = document.getElementById('quantity').value;
+            let total = price * quantity;
+            document.getElementById('total').textContent = "Total: $" + total.toFixed(2);
+          }
+        </script>
+      </li>
 
-    <section>
-      <h2>8. Hover Effect Box</h2>
-      <div id="hoverBox" class="hover-box">Hover over me!</div>
-    </section>
+      <!-- #6 Internal JavaScript Special Effect -->
+      <li id="js6">
+        <h3>#6 Internal JavaScript Special Effect (Image Rotator)</h3>
+        <p>This image will rotate every 2 seconds.</p>
+        <img id="rotateImage" src="images/pic1.jpg" alt="Rotating art" width="300">
+        <script>
+          // Internal script: cycles images automatically
+          let images = ["images/pic1.jpg", "images/pic2.jpg", "images/pic3.jpg"];
+          let i = 0;
+          setInterval(function() {
+            i = (i + 1) % images.length;
+            document.getElementById("rotateImage").src = images[i];
+          }, 2000);
+        </script>
+      </li>
+
+      <!-- #7 External JavaScript File -->
+      <li id="js7">
+        <h3>#7 External JavaScript Slideshow</h3>
+        <p>This slideshow is controlled by an external script.</p>
+        <div id="slideshow"></div>
+        <script src="scripts/externalSlideshow.js" type="text/javascript"></script>
+      </li>
+
+      <!-- #8 Pop-Up Window -->
+      <li id="js8">
+        <h3>#8 JavaScript Pop-Up Window</h3>
+        <p>Click below to open a custom pop-up window:</p>
+        <a href="javascript:void(0);" onclick="openPopup()">Open Pop-Up Message</a>
+        <script>
+          function openPopup() {
+            window.open("popup-message.html", "popUp", "width=400,height=300,left=300,top=200");
+          }
+        </script>
+      </li>
+
+    </ol>
   </main>
 
   <footer>
-    <p>&copy; 2025 Kyeanna Zane Mitchell. All rights reserved.</p>
+    <p>&copy; 2025 Kyeanna Zane Mitchell</p>
   </footer>
-
-  <script>
-    /* 2. Background Color Changer */
-    function changeColor() {
-      const colors = ['#c1e1c1', '#f9d5e5', '#f0e68c', '#add8e6', '#dda0dd'];
-      document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    }
-
-    /* 4. Simple Calculator */
-    function calculate() {
-      const n1 = parseFloat(document.getElementById('num1').value);
-      const n2 = parseFloat(document.getElementById('num2').value);
-      const result = n1 + n2;
-      document.getElementById('calcResult').innerText = `Result: ${result}`;
-    }
-
-    /* 6. Show Date */
-    function showDate() {
-      document.getElementById('dateDisplay').innerText = new Date().toLocaleString();
-    }
-
-    /* 7. Word Counter */
-    function countWords() {
-      const text = document.getElementById('textInput').value.trim();
-      const words = text ? text.split(/\s+/).length : 0;
-      document.getElementById('wordCount').innerText = `Word Count: ${words}`;
-    }
-
-    /* 8. Hover Effect Box */
-    const box = document.getElementById("hoverBox");
-    box.addEventListener("mouseover", () => {
-      box.style.backgroundColor = "#88c9bf";
-      box.innerText = "Nice Hover!";
-    });
-    box.addEventListener("mouseout", () => {
-      box.style.backgroundColor = "#eee";
-      box.innerText = "Hover over me!";
-    });
-  </script>
 </body>
 </html>
