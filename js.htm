@@ -45,7 +45,16 @@
            onmouseover="this.src='images/pic2.png'"
            onmouseout="this.src='images/pic1.png'">
     </section>
-
+ <!-- 4. Last Updated Date -->
+    <section>
+      <h2>4. Last Updated</h2>
+      <p style="font-size: smaller;">
+        <script>
+          var update = new Date(document.lastModified);
+          document.write("Last Updated: " + update.toLocaleDateString() + " " + update.toLocaleTimeString());
+        </script>
+      </p>
+    </section>
     <section>
       <h2>4. Simple Calculator</h2>
       <p>Enter two numbers:</p>
