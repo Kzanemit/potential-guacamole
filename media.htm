@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Media - Kyeanna Zane Mitchell</title>
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <h1>Kyeanna Zane Mitchell</h1>
+    <h2>Media Page</h2>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.htm">Resume</a></li>
+        <li><a href="portfolio.htm">Portfolio</a></li>
+        <li><a href="transcript.htm">Transcript</a></li>
+        <li><a href="newsletter.htm">Newsletter</a></li>
+        <li><a href="contact.htm">Contact</a></li>
+        <li><a href="js.htm">JavaScript</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Multimedia Showcase</h2>
+    <p>This page includes examples of audio, video, images, and interactive multimedia as required by the project rubric.</p>
+
+    <ol>
+
+      <!-- ================= ITEM 1: AUDIO ================= -->
+      <li>
+        <h3>Audio Clip</h3>
+        <audio controls>
+          <source src="media/audio1.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </li>
+
+      <!-- ================= ITEM 2: VIDEO ================= -->
+      <li>
+        <h3>Video Clip</h3>
+        <video width="480" controls>
+          <source src="media/video1.mp4" type="video/mp4">
+        </video>
+      </li>
+
+      <!-- ================= ITEM 3: MOVING VISUAL (GIF) ================= -->
+      <li>
+        <h3>Animation (GIF)</h3>
+        <img src="media/animation1.gif" alt="Animated graphic">
+      </li>
+
+      <!-- ================= ITEM 4: CSS ANIMATION ================= -->
+      <li>
+        <h3>CSS Animation</h3>
+        <div class="boxAnimation"></div>
+      </li>
+
+      <!-- ================= ITEM 5: JAVASCRIPT SLIDESHOW ================= -->
+      <li>
+        <h3>JavaScript Slideshow</h3>
+
+        <div id="slideshow">
+          <img id="slideImage" src="media/slide1.jpg" alt="Slideshow image">
+        </div>
+
+        <script>
+          const slides = ["media/slide1.jpg", "media/slide2.jpg", "media/slide3.jpg"];
+          let index = 0;
+
+          function nextSlide() {
+            index = (index + 1) % slides.length;
+            document.getElementById("slideImage").src = slides[index];
+          }
+
+          setInterval(nextSlide, 2000);
+        </script>
+      </li>
+
+      <!-- ================= ITEM 6: IMAGE MAP ================= -->
+      <li>
+        <h3>Image Map</h3>
+        <p>Click different parts of the image to visit links.</p>
+
+        <img src="media/mapImage.jpg" usemap="#exampleMap" alt="Clickable map" width="500">
+
+        <map name="exampleMap">
+          <area shape="rect" coords="0,0,250,250" href="index.html" alt="Home">
+          <area shape="rect" coords="250,0,500,250" href="portfolio.htm" alt="Portfolio">
+        </map>
+      </li>
+
+      <!-- OPTIONAL ITEM: STYLIZED TEXT SHADOW -->
+      <li>
+        <h3>Stylized Text (Text Shadow Example)</h3>
+        <p class="shadowText">Creative Typography Example</p>
+      </li>
+
+      <!-- OPTIONAL ITEM: YOUTUBE EMBED -->
+      <li>
+        <h3>YouTube Embed</h3>
+        <iframe width="480" height="270" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="Embedded YouTube video" allowfullscreen></iframe>
+      </li>
+
+    </ol>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Kyeanna Zane Mitchell
+  </footer>
+</div>
+
+</body>
+</html>
